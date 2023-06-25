@@ -23,8 +23,12 @@
 <script>
 import {reactive} from "vue";
 import axios from "axios";
+<<<<<<< HEAD
 import store from "@/script/store";
 import router from "@/script/router";
+=======
+// import router from "@/script/router";
+>>>>>>> origin/master
 
 export default {
   setup() {
@@ -37,9 +41,14 @@ export default {
 
     const submit = () => {
       axios.post("/api/account/login", state.form).then((res) => {
+<<<<<<< HEAD
         store.commit("setAccount", res.data);
         router.push({path:"/"});
         window.alert("Login successfully");
+=======
+        console.log(res);
+        window.alret("Login successfully");
+>>>>>>> origin/master
       });
     }
 
