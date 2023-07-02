@@ -83,6 +83,6 @@ export default {
   display:block;
   margin:0 auto;
   padding:30px 50px;
-  font-size: 20px;
+  font-size: 15px;
 }
 </style>
