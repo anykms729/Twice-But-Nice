@@ -11,6 +11,10 @@
 import Header from "@/components/Header.vue";
 import Footer from "@/components/Footer.vue";
 import store from "@/script/store";
+import axios from "axios";
+import {watch} from "vue";
+import {useRoute} from 'vue-router';
+
 
 export default {
   name: 'App',
@@ -18,11 +22,19 @@ export default {
     Footer,
     Header
   },
-  setup() {
-    const id = sessionStorage.getItem("id");
-    if (id) {
-      store.commit("setAccount", id);
-    }
+  setup: function () {
+    const check = () => {
+      axios.get("/api/account/check").then(({data}) => {
+        console.log(data);
+        store.commit("setAccount", data || 0);
+      })
+    };
+    const route = useRoute();
+
+    watch(route, () => {
+      check();
+    })
+
   }
 
 }
