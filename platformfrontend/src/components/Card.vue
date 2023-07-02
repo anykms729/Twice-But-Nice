@@ -25,16 +25,22 @@
 
 <script>
 
-import lib from "../../../platformbackend/src/scripts/lib";
 
+import axios from "axios";
+import lib from "@/script/lib";
 export default {
   name: "Card",
   props: {
     item: Object
   },
 
-  setup(){
-    return {lib}
+  setup() {
+    const addToCart = (itemId) => {
+      axios.post(`/api/cart/items/${itemId}`).then(() => {
+        console.log('success')
+      })
+    };
+    return {lib , addToCart}
   }
 
 }
@@ -52,7 +58,6 @@ export default {
 .card .card-body .price {
   text-decoration: line-through;
 }
-
 
 
 </style>
