@@ -9,7 +9,7 @@
         <div class="row g-5">
           <div class="col-md-5 col-lg-4 order-md-last"><h4
               class="d-flex justify-content-between align-items-center mb-3">
-            <span class="text-primary">Purchase request history</span>
+            <span class="text-primary">Order history</span>
             <span
                 class="badge bg-primary rounded-pill">
               {{ state.items.length }}
@@ -47,26 +47,26 @@
                 </div>
               </div>
               <hr class="my-4">
-              <h4 class="mb-3">결제 수단</h4>
+              <h4 class="mb-3">Payment method</h4>
               <div class="my-3">
                 <div class="form-check">
                   <input id="card" name="paymentMethod" type="radio" class="form-check-input"
                          value="card" v-model="state.form.payment">
-                  <label class="form-check-label" for="card">신용카드
+                  <label class="form-check-label" for="card">Credit card
                   </label></div>
                 <div class="form-check">
                   <input id="bank" name="paymentMethod" type="radio" class="form-check-input"
                          value="bank" v-model="state.form.payment">
-                  <label class="form-check-label" for="bank">무통장입금</label>
+                  <label class="form-check-label" for="bank">Bank Transfer</label>
                 </div>
               </div>
-              <label for="cc-name" class="form-label">카드 번호</label>
+              <label for="cc-name" class="form-label">Card Number</label>
               <input type="text"
                      class="form-control"
                      id="cc-name"
                      v-model="state.form.cardNumber">
               <hr class="my-4">
-              <button class="w-100 btn btn-primary btn-lg" @click="submit()">결제하기</button>
+              <button class="w-100 btn btn-primary btn-lg" @click="submit()">Proceed</button>
             </div>
           </div>
         </div>
@@ -77,9 +77,9 @@
 
 <script>
 import {computed, reactive} from "vue";
-import axios from "axios";
 import lib from "@/script/lib";
 import router from "@/script/router";
+import axios from "axios";
 
 export default {
   setup() {
@@ -106,7 +106,7 @@ export default {
       args.items = JSON.stringify(state.items);
 
       axios.post("/api/orders", args).then(() => {
-        alert('주문 완료하였습니다.');
+        console.log('Order successful');
         router.push({path: "/orders"})
       })
     }

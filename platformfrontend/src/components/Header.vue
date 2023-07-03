@@ -18,6 +18,9 @@
               <li>
                 <router-link to="/" class="text-white">Home</router-link>
               </li>
+              <li v-if="$store.state.account.id">
+                <router-link to="/orders" class="text-white">Order History</router-link>
+              </li>
               <li>
                 <router-link to="/login" class="text-white" v-if="!$store.state.account.id">Login</router-link>
                 <a to="/login" class="text-white" @click="logout()" v-else>Logout</a>
@@ -53,14 +56,16 @@
 <script>
 import router from "@/script/router";
 import store from "@/script/store";
+import axios from "axios";
 
 export default {
   name: 'Header',
   setup() {
     const logout = () => {
-      store.commit('setAccount', 0);
-      sessionStorage.removeItem("id");
-      router.push({path: "/"});
+      axios.post("api/account/logout").then(()=> {
+        store.commit('setAccount', 0);
+        router.push({path: "/"});
+      })
     }
     return {logout};
   }
