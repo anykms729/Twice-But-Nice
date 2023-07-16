@@ -11,7 +11,6 @@ const routes = [
     {path: '/cart', component: Cart},
     {path: '/order', component: Order},
     {path: '/orders', component: Orders}
-
 ]
 
 const router = createRouter(

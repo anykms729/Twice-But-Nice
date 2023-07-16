@@ -3,13 +3,11 @@
     <div class="container">
       <main>
         <div class="py-5 text-center"><h2>Order</h2>
-          <p class="lead">Below is an example form built entirely with Bootstrap’s form controls. Each required form
-            group has a validation state that can be triggered by attempting to submit the form without completing
-            it.</p></div>
+          <p class="lead">Welcome to Twice but Nice, Ireland's premier C2C second-hand platform! Unleash the hidden value of pre-loved items and enjoy seamless buying and selling. With just a click, dive into a world of incredible deals and unique finds.</p></div>
         <div class="row g-5">
           <div class="col-md-5 col-lg-4 order-md-last"><h4
               class="d-flex justify-content-between align-items-center mb-3">
-            <span class="text-primary">Order history</span>
+            <span class="text-primary">Order History</span>
             <span
                 class="badge bg-primary rounded-pill">
               {{ state.items.length }}
@@ -90,7 +88,7 @@ export default {
         address: "",
         payment: "",
         cardNumber: "",
-        items: "",
+        items: ""
       }
     })
 
@@ -101,13 +99,19 @@ export default {
       })
     };
 
+    /**
+     The function first creates a new object called args that contains the form data from the state object.
+     It then converts the items array in the state object to a JSON string and sets it as the value of the items property in the args object.
+     */
     const submit = () => {
       const args = JSON.parse(JSON.stringify(state.form));
       args.items = JSON.stringify(state.items);
+      console.log('Order successful');
+
 
       axios.post("/api/orders", args).then(() => {
         console.log('Order successful');
-        router.push({path: "/orders"})
+        router.push({path: "/api/orders"})
       })
     }
 

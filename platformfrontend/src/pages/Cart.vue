@@ -25,6 +25,7 @@ export default {
       items: []
     })
 
+    // Load the cart items from the server using an Axios GET request
     const load = () => {
       axios.get("/api/cart/items").then(({data}) => {
         console.log(data);
@@ -32,14 +33,17 @@ export default {
       })
     };
 
+    // Remove a cart item from the server using an Axios DELETE request
     const remove = (itemId) => {
       axios.delete(`/api/cart/items/${itemId}`).then(() => {
         load();
       })
     }
 
+    // Load the cart items when the component is mounted
     load();
 
+    // Return the state object, lib object, and remove function
     return {state, lib, remove}
   }
 }

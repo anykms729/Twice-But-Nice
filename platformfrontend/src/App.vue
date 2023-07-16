@@ -1,3 +1,8 @@
+<!--
+In App.vue, I can define the layout and structure of application, including the header, footer, and main content areas.
+I can also define the global styles and scripts that will be used throughout the application.
+-->
+
 <template>
   <Header/>
   <RouterView/>
@@ -10,9 +15,13 @@
 
 import Header from "@/components/Header.vue";
 import Footer from "@/components/Footer.vue";
+// The store import is used to access the Vuex store instance, which is used for managing the state of the application.
 import store from "@/script/store";
+// The axios import is used to make HTTP requests to the server or API.
 import axios from "axios";
+// The watch import is used to watch for changes to a reactive property in the Vue.js component.
 import {watch} from "vue";
+// The useRoute import is used to access the current route object in the Vue.js component.
 import {useRoute} from 'vue-router';
 
 
@@ -26,6 +35,8 @@ export default {
     const check = () => {
       axios.get("/api/account/check").then(({data}) => {
         console.log(data);
+        // The store.commit method is used to call a mutation named setAccount and pass it the data object as an argument.
+        // The data object is typically the response data from an HTTP request made using the Axios library.
         store.commit("setAccount", data || 0);
       })
     };

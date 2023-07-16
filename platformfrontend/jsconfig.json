@@ -1,14 +1,19 @@
 {
   "compilerOptions": {
+    // Target version of ECMAScript to compile to
     "target": "es5",
     "module": "esnext",
+    // Base URL for module resolution
     "baseUrl": "./",
+    // Module resolution strategy to use
     "moduleResolution": "node",
+    // Path mappings for module resolution
     "paths": {
       "@/*": [
         "src/*"
       ]
     },
+    // Libraries to include in the compilation process
     "lib": [
       "esnext",
       "dom",
