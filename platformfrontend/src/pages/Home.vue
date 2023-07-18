@@ -1,6 +1,7 @@
 <template>
   <div class="home">
-    <button class="btn btn-primary btn-black" @click="showAddForm = true">+ Add item</button>
+     <router-link to="/addItem" class="text-black">+ Add item</router-link>
+
     <div class="album py-5 bg-light">
       <div class="container">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
@@ -11,45 +12,40 @@
         </div>
       </div>
     </div>
-    <Modal v-if="showAddForm" @close="showAddForm = false">
-      <AddForm @add-item="addItem"/>
-    </Modal>
   </div>
 </template>
 
 <script>
 import axios from "axios";
-import {reactive, ref} from "vue";
+import {reactive} from "vue";
 import Card from "@/components/Card";
-import AddForm from "@/components/AddForm.vue";
-import Modal from "@/components/Modal.vue";
+
 
 export default {
   name: "Home",
-  components: {Card, AddForm, Modal},
+  components: {Card},
   setup() {
     const state = reactive({
       items: []
     });
 
-    const showAddForm = ref(false);
+    // const addItem = () => {
+    //   axios.post("/api/items", item).then((res) => {
+    //     console.log("Item added successfully:", res.data);
+    //     router.push({path:"/"});
+    //     window.alert(res.data);
+    //   }).catch((error)=>{
+    //     window.alert(error);
+    //   });
+    // }
 
-    const addItem = (item) => {
-      axios
-          .post("/api/items", item)
-          .then((response) => {
-            console.log("Item added successfully:", response.data);
-          })
-          .catch((error) => {
-            console.error("Error adding item:", error);
-          });
-    };
+
 
     axios.get("/api/items").then(({data}) => {
       state.items = data;
     });
 
-    return {state, showAddForm, addItem}
+    return {state}
   }
 }
 </script>
