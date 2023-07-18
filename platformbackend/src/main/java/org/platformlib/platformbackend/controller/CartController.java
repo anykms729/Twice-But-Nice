@@ -31,7 +31,8 @@ public class CartController {
     public ResponseEntity getCartItems(@CookieValue(value = "token", required = false) String token) {
 
         if (!jwtService.isValid(token)) {
-            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED);
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("User not logged in");
+
         }
 
         int memberId = jwtService.getId(token);
