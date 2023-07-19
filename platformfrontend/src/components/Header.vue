@@ -9,7 +9,7 @@
               Welcome to Twice but Nice, Ireland's premier C2C second-hand platform! We believe in unlocking the hidden
               value in pre-loved items, empowering individuals to buy and sell with ease. With a click of a button, you
               can explore a world of remarkable deals, whether you're hunting for unique treasures or looking to
-              declutter your life. Our vibrant community of sellers and buyers ensures that every transaction is a
+              clutter your life. Our vibrant community of sellers and buyers ensures that every transaction is a
               win-win, fostering a sustainable and circular economy. </p>
           </div>
           <div class="col-sm-4 offset-md-1 py-4">
@@ -30,16 +30,10 @@
         </div>
       </div>
     </div>
-    <div class="navbar navbar-dark bg-dark shadow-sm">
+    <div class="navbar navbar-dark bg-warning shadow-sm">
       <div class="container">
         <a href="#" class="navbar-brand d-flex align-items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
-               stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2"
-               viewBox="0 0 24 24">
-            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
-            <circle cx="12" cy="13" r="4"/>
-          </svg>
-          <strong>Twice but Nice</strong>
+          <strong @click.prevent="$router.push('/')">Twice but Nice</strong>
         </a>
         <router-link to="/cart" class="cart btn">
           <i class="fa fa-shopping-cart" aria-hidden="true"></i>

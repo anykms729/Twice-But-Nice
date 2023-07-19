@@ -30,18 +30,6 @@ export default {
       items: []
     });
 
-    // const addItem = () => {
-    //   axios.post("/api/items", item).then((res) => {
-    //     console.log("Item added successfully:", res.data);
-    //     router.push({path:"/"});
-    //     window.alert(res.data);
-    //   }).catch((error)=>{
-    //     window.alert(error);
-    //   });
-    // }
-
-
-
     axios.get("/api/items").then(({data}) => {
       state.items = data;
     });
