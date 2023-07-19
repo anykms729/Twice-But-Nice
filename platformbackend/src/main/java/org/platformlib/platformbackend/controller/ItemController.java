@@ -42,8 +42,11 @@ public class ItemController {
 
         return ResponseEntity.ok("Item added successfully");
     }
+
+//    the @PathVariable annotation to capture the dynamic value and assign it to a method parameter
     @DeleteMapping("/api/items/{itemId}")
-    public ResponseEntity<String> deleteItem(@PathVariable int itemId) {
+    public ResponseEntity<String> deleteItem
+            (@PathVariable int itemId) {
         // Check if the item with the specified ID exists in the database
         if (itemRepository.existsById(itemId)) {
             // Delete the item from the database
