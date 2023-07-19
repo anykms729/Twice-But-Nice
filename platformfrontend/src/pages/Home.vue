@@ -1,7 +1,8 @@
 <template>
   <div class="home">
-    <button class="btn btn-primary btn-black" @click="$router.push('/addItem')">
-      🛍️ Add item
+    <button class="btn btn-warning btn-black text-white" @click="$router.push('/addItem')">
+      <i class="fa fa-car"></i>
+      <span style="font-weight: bold;"> Add item</span>
     </button>
     <div class="album py-5 bg-light">
       <div class="container">

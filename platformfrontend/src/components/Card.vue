@@ -9,7 +9,7 @@
         </span>
       </p>
       <div class="d-flex justify-content-between align-items-center">
-        <button class="btn btn-primary" @click="addToCart(item.id)">
+        <button class="btn btn-warning" @click="addToCart(item.id)">
           <i class="fa fa-shopping-cart" aria-hidden="true"></i>
         </button>
         <small class="price text-muted">

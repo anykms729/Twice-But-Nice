@@ -4,12 +4,12 @@ I can also define the global styles and scripts that will be used throughout the
 -->
 
 <template>
-  <Header/>
+   <Header/>
 <!-- The <router-view> component is a functional component that renders the matched component for the given path. -->
+
   <RouterView/>
   <Footer/>
-
-</template>
+ </template>
 
 <script>
 
@@ -52,6 +52,7 @@ export default {
 </script>
 
 <style>
+
 .bd-placeholder-img {
   font-size: 1.125rem;
   text-anchor: middle;

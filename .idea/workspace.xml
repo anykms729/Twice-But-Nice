@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a371e409-f924-400f-9d5c-4f254ae01e88" name="Changes" comment="Update Add Item vue page">
+    <list default="true" id="a371e409-f924-400f-9d5c-4f254ae01e88" name="Changes" comment="Update Home.vue">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformfrontend/src/components/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/platformfrontend/src/components/Header.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformfrontend/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/platformfrontend/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformfrontend/src/components/Card.vue" beforeDir="false" afterPath="$PROJECT_DIR$/platformfrontend/src/components/Card.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformfrontend/src/pages/Cart.vue" beforeDir="false" afterPath="$PROJECT_DIR$/platformfrontend/src/pages/Cart.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/platformfrontend/src/pages/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/platformfrontend/src/pages/Home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformfrontend/src/pages/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/platformfrontend/src/pages/Login.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,7 +180,7 @@
       <workItem from="1689435063398" duration="596000" />
       <workItem from="1689435880371" duration="4734000" />
       <workItem from="1689513954500" duration="24689000" />
-      <workItem from="1689681164988" duration="21097000" />
+      <workItem from="1689681164988" duration="26285000" />
     </task>
     <task id="LOCAL-00001" summary="Upgrade images">
       <option name="closed" value="true" />
@@ -243,7 +246,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689770713891</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Update Home.vue">
+      <option name="closed" value="true" />
+      <created>1689773058103</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1689773058105</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -278,7 +289,8 @@
     <MESSAGE value="Update Add Item Controller" />
     <MESSAGE value="Update Delete Item Controller" />
     <MESSAGE value="Update Add Item vue page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update Add Item vue page" />
+    <MESSAGE value="Update Home.vue" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update Home.vue" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
