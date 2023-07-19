@@ -1,9 +1,17 @@
 <template>
-  <div class="home">
-    <button class="btn btn-warning btn-black text-white" @click="$router.push('/addItem')">
-      <i class="fa fa-car"></i>
-      <span style="font-weight: bold;"> Add item</span>
-    </button>
+  <div class="home bg-light">
+    <div class="container">
+      <div class="buttons-container">
+        <button class="btn btn-warning btn-black text-white" @click="$router.push('/addItem')">
+          <i class="fa fa-car"></i>
+          <span style="font-weight: bold;"> Add item</span>
+        </button>
+        <button class="btn btn-success btn-black text-white" @click="$router.push('/deleteItem')">
+          <i class="fa fa-scissors"></i>
+          <span style="font-weight: bold;"> Delete item</span>
+        </button>
+      </div>
+    </div>
     <div class="album py-5 bg-light">
       <div class="container">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
@@ -43,13 +51,22 @@ export default {
 
 
 <style scoped>
+
+
+.buttons-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .btn {
-  float: right;
-  margin-top: 10px;
-  margin-right: 10px;
+  margin-top:17px;
+  margin-left: 10px;
   font-size: 14px;
   padding: 5px 10px;
+}
 
+.btn:hover {
+  transform: scale(1.1);
 }
 
 </style>

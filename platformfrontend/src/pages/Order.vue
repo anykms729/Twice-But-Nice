@@ -7,9 +7,9 @@
         <div class="row g-5">
           <div class="col-md-5 col-lg-4 order-md-last"><h4
               class="d-flex justify-content-between align-items-center mb-3">
-            <span class="text-primary">Order History</span>
+            <span class="text-warning">Order History</span>
             <span
-                class="badge bg-primary rounded-pill">
+                class="badge bg-warning rounded-pill">
               {{ state.items.length }}
             </span></h4>
             <ul class="list-group mb-3">
@@ -64,7 +64,7 @@
                      id="cc-name"
                      v-model="state.form.cardNumber">
               <hr class="my-4">
-              <button class="w-100 btn btn-primary btn-lg" @click="submit()">Proceed</button>
+              <button class="w-100 btn btn-warning btn-lg text-white" style="font-weight: bold;" @click="submit()">Proceed</button>
             </div>
           </div>
         </div>

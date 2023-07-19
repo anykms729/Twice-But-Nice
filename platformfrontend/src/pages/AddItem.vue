@@ -28,8 +28,8 @@
                 <input type="number" id="discountPer" v-model="item.discountPer" required class="form-control">
               </div>
               <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal" @click="closeModalAndRedirect">Close</button>
-                <button type="submit" class="btn btn-primary" >Add Item</button>
+                <button type="button" class="btn btn-success" data-dismiss="modal" style="font-weight: bold;" @click="closeModalAndRedirect">Close</button>
+                <button type="submit" class="btn btn-warning text-white" style="font-weight: bold;" >Add Item</button>
               </div>
             </form>
           </div>

@@ -13,17 +13,17 @@
               win-win, fostering a sustainable and circular economy. </p>
           </div>
           <div class="col-sm-4 offset-md-1 py-4">
-            <h4 class="text-white">Contact</h4>
+            <h4 class="text-white">Category</h4>
             <ul class="list-unstyled">
               <li>
-                <router-link to="/" class="text-white">Home</router-link>
+                <router-link to="/" class="text-white" style="text-decoration: none;">Home</router-link>
               </li>
               <li v-if="$store.state.account.id">
-                <router-link to="/orders" class="text-white">Order History</router-link>
+                <router-link to="/orders" class="text-white" style="text-decoration: none;">Order History</router-link>
               </li>
               <li>
-                <router-link to="/login" class="text-white" v-if="!$store.state.account.id">Login</router-link>
-                <a to="/login" class="text-white" @click="logout()" v-else>Logout</a>
+                <router-link to="/login" class="text-white" v-if="!$store.state.account.id" style="text-decoration: none;">Login</router-link>
+                <a to="/login" class="text-white" style="text-decoration: none;" @click="logout()" v-else>Logout</a>
               </li>
             </ul>
           </div>
@@ -33,10 +33,11 @@
     <div class="navbar navbar-dark bg-warning shadow-sm">
       <div class="container">
         <a href="#" class="navbar-brand d-flex align-items-center">
-          <strong @click.prevent="$router.push('/')">Twice but Nice</strong>
+          <i class="fa fa-envira text-white" style="font-size:30px;"></i>
+          <strong @click.prevent="$router.push('/')"> Twice but Nice</strong>
         </a>
         <router-link to="/cart" class="cart btn">
-          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+          <i class="fa fa-shopping-cart" aria-hidden="true" style="font-size:23px"></i>
         </router-link>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader"
                 aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">

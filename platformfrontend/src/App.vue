@@ -7,7 +7,7 @@ I can also define the global styles and scripts that will be used throughout the
    <Header/>
 <!-- The <router-view> component is a functional component that renders the matched component for the given path. -->
 
-  <RouterView/>
+    <RouterView/>
   <Footer/>
  </template>
 
