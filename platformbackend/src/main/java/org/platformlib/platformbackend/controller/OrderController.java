@@ -1,5 +1,6 @@
 package org.platformlib.platformbackend.controller;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import jakarta.transaction.Transactional;
 import org.platformlib.platformbackend.dto.OrderDto;
 import org.platformlib.platformbackend.entity.Order;
@@ -48,17 +49,6 @@ public class OrderController {
     }
 
     /**
-     * Push a new order for the authenticated members
-     * @param dto the order data
-     * @param token the authentication token
-     * @return a response entity indicating success or failure
-     */
-
-    /**
-    The @Transactional annotation is used in Spring to indicate that a method should be executed within a transaction. A transaction is a unit of work that is performed on a database, and it ensures that all changes made to the database within the transaction are either committed (saved permanently) or rolled back (undone) if an error occurs.
-    */
-
-    /**
      POST when you want to create a new resource on the server, and PUT when you want to update an existing resource. However, the specific use cases for each method may vary depending on the requirements of your application.
      */
     @Transactional
@@ -66,7 +56,7 @@ public class OrderController {
     public ResponseEntity pushOrder(
             @RequestBody OrderDto dto,
             @CookieValue(value = "token", required = false) String token
-    ) {
+    ) throws JsonProcessingException {
         LOGGER.info("pushOrder method called.");
 
         if (!jwtService.isValid(token)) {
@@ -81,6 +71,7 @@ public class OrderController {
         newOrder.setCardNumber(dto.getCardNumber());
         newOrder.setItems(dto.getItems());
 
+
         try {
             orderRepository.save(newOrder);
             cartRepository.deleteByMemberId(memberId);
@@ -89,7 +80,6 @@ public class OrderController {
 
             return new ResponseEntity<>(HttpStatus.OK);
         } catch (Exception e) {
-            System.out.println("pushOrder method completed successfully.");
             LOGGER.severe("An error occurred during pushOrder: " + e.getMessage());
             throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR, "Failed to process order.");
         }

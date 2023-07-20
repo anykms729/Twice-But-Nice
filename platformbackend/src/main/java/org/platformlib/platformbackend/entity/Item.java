@@ -35,4 +35,36 @@ public class Item {
     public Long getId() {
         return (long) id;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getImgPath() {
+        return imgPath;
+    }
+
+    public void setImgPath(String imgPath) {
+        this.imgPath = imgPath;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    public int getDiscountPer() {
+        return discountPer;
+    }
+
+    public void setDiscountPer(int discountPer) {
+        this.discountPer = discountPer;
+    }
 }

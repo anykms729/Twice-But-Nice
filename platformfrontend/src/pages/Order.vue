@@ -87,16 +87,16 @@ export default {
         name: "",
         address: "",
         payment: "",
-        cardNumber: "",
-        items: ""
+        items: "",
       }
     })
 
     const load = () => {
       axios.get("/api/cart/items").then(({data}) => {
-        console.log(data);
+        console.log("Data is loaded");
+        console.log('this is data'+data);
         state.items = data;
-      })
+       })
     };
 
     /**
@@ -106,14 +106,14 @@ export default {
     const submit = () => {
       const args = JSON.parse(JSON.stringify(state.form));
       args.items = JSON.stringify(state.items);
-      console.log('Order successful');
 
-
+      console.log('Sending request to Server'+args)
       axios.post("/api/orders", args).then(() => {
-        console.log('Order successful');
-        router.push({path: "/api/orders"})
+        console.log('Axios post successful')
+        router.push({path: "/orders"})
       })
     }
+
 
     const computedPrice = computed(() => {
       let result = 0;

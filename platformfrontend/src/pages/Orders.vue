@@ -18,7 +18,7 @@
           <td>{{ o.address }}</td>
           <td>{{ o.payment }}</td>
           <td>
-            <div v-for="(i, idx2) in d.items" :key="idx2">{{ i.name }}</div>
+            <div v-for="(i, idx2) in o.items" :key="idx2">{{ i.name }}</div>
           </td>
         </tr>
         </tbody>
@@ -42,14 +42,12 @@ export default {
       console.log(data);
       state.orders = data;
 
-      for (let d of data) {
-        if (d.items) {
-          d.items = JSON.parse(d.items);
+      for (let order of state.orders) {
+        if (order.items) {
+          order.items = JSON.parse(order.items);
         }
-
-        state.orders.push(d);
       }
-    })
+    });
 
     return {state, lib}
   }

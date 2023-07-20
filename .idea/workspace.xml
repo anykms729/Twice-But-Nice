@@ -4,16 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a371e409-f924-400f-9d5c-4f254ae01e88" name="Changes" comment="Update design &amp; Add DeleteItem page">
+    <list default="true" id="a371e409-f924-400f-9d5c-4f254ae01e88" name="Changes" comment="Update Order function and debug error which is caused misconfiguration in Database column">
+      <change afterPath="$PROJECT_DIR$/platformfrontend/public/img/elephant-g7baf1f085_640.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platformfrontend/src/pages/DeleteItem.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7e2517f0-c840-4a5d-bd0e-e025ea261eb2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7e2517f0-c840-4a5d-bd0e-e025ea261eb2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/platformbackend/src/main/java/org/platformlib/platformbackend/controller/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformbackend/src/main/java/org/platformlib/platformbackend/controller/ItemController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformbackend/src/main/java/org/platformlib/platformbackend/repository/ItemRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformbackend/src/main/java/org/platformlib/platformbackend/repository/ItemRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformfrontend/public/img/tree-gde9651e5e_640.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformfrontend/src/assets/assets/img/post-impressionist-geb318af19_640.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformfrontend/src/assets/assets/img/shoe-g0be8defea_640.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformfrontend/src/assets/assets/img/vincent-van-gogh-g3cbefc52f_640.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformfrontend/src/assets/assets/img/vintage-g119f88179_640.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformfrontend/src/pages/AddItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/platformfrontend/src/pages/AddItem.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformbackend/src/main/java/org/platformlib/platformbackend/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformbackend/src/main/java/org/platformlib/platformbackend/controller/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformbackend/src/main/java/org/platformlib/platformbackend/dto/OrderDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformbackend/src/main/java/org/platformlib/platformbackend/dto/OrderDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformbackend/src/main/java/org/platformlib/platformbackend/entity/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformbackend/src/main/java/org/platformlib/platformbackend/entity/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformfrontend/src/components/Card.vue" beforeDir="false" afterPath="$PROJECT_DIR$/platformfrontend/src/components/Card.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformfrontend/src/components/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/platformfrontend/src/components/Header.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformfrontend/src/pages/Order.vue" beforeDir="false" afterPath="$PROJECT_DIR$/platformfrontend/src/pages/Order.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformfrontend/src/pages/Orders.vue" beforeDir="false" afterPath="$PROJECT_DIR$/platformfrontend/src/pages/Orders.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,7 +191,7 @@
       <workItem from="1689435063398" duration="596000" />
       <workItem from="1689435880371" duration="4734000" />
       <workItem from="1689513954500" duration="24689000" />
-      <workItem from="1689681164988" duration="35848000" />
+      <workItem from="1689681164988" duration="53119000" />
     </task>
     <task id="LOCAL-00001" summary="Upgrade images">
       <option name="closed" value="true" />
@@ -278,7 +281,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689786413994</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Update design &amp; Add DeleteItem page">
+      <option name="closed" value="true" />
+      <created>1689849215250</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1689849215250</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -316,7 +327,8 @@
     <MESSAGE value="Update Home.vue" />
     <MESSAGE value="Update design" />
     <MESSAGE value="Update design &amp; Add DeleteItem page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update design &amp; Add DeleteItem page" />
+    <MESSAGE value="Update Order function and debug error which is caused misconfiguration in Database column" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update Order function and debug error which is caused misconfiguration in Database column" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

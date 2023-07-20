@@ -30,7 +30,7 @@
         </div>
       </div>
     </div>
-    <div class="navbar navbar-dark bg-warning shadow-sm">
+    <div class="navbar navbar-dark bg-success shadow-sm">
       <div class="container">
         <a href="#" class="navbar-brand d-flex align-items-center">
           <i class="fa fa-envira text-white" style="font-size:30px;"></i>

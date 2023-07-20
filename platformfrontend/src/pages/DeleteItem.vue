@@ -1,0 +1,114 @@
+<template>
+  <div>
+    <h1></h1>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Delete Item</h5>
+          </div>
+          <div class="modal-body">
+            <form @submit.prevent="deleteItem">
+              <div class="form-group">
+                <label for="itemId">Item ID:</label>
+                <input type="text" id="itemId" v-model="item.itemId" required class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="itemName">Item Name:</label>
+                <input type="text" id="itemName" v-model="item.itemName" required class="form-control">
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-dismiss="modal" style="font-weight: bold;" @click="closeModalAndRedirect">Close</button>
+                <button type="submit" class="btn btn-warning text-white" style="font-weight: bold;">Delete Item</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+import axios from "axios";
+
+export default {
+  data() {
+    return {
+      item: {
+        itemId: "",
+        itemName: ""
+      }
+    };
+  },
+  methods: {
+    deleteItem() {
+      const { itemId, itemName } = this.item;
+      // Send API request to delete the item using the provided ID and name
+      axios
+          .delete(`/api/items/${itemId}`, {
+            data: {
+              itemName: itemName
+            }
+          })
+          .then(response => {
+            console.log("Item deleted successfully:", response.data);
+            // Reset the form fields
+            this.item = {
+              itemId: "",
+              itemName: ""
+            };
+            // Close the modal and redirect to home
+            this.closeModalAndRedirect();
+          })
+          .catch(error => {
+            console.error("Error deleting item:", error);
+          });
+    },
+    closeModal() {
+      const modalElement = document.getElementById("exampleModalCenter");
+      modalElement.classList.remove("show");
+      modalElement.style.display = "none";
+      const modalBackdropElement = document.getElementsByClassName("modal-backdrop")[0];
+      modalBackdropElement.parentNode.removeChild(modalBackdropElement);
+    },
+    closeModalAndRedirect() {
+      this.closeModal();
+      this.$router.push('/');
+    }
+  },
+  mounted() {
+    // Open the modal when the component is mounted
+    const modalElement = document.getElementById("exampleModalCenter");
+    modalElement.style.display = "block";
+    modalElement.classList.add("show");
+    modalElement.style.paddingRight = "15px";
+    document.body.classList.add("modal-open");
+    const modalBackdropElement = document.createElement("div");
+    modalBackdropElement.classList.add("modal-backdrop");
+    modalBackdropElement.classList.add("fade");
+    modalBackdropElement.classList.add("show");
+    document.body.appendChild(modalBackdropElement);
+  }
+};
+</script>
+
+<style scoped>
+/* Additional CSS styling for the form */
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+</style>
