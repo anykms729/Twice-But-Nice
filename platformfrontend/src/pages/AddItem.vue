@@ -50,11 +50,15 @@ export default {
         imgPath: "",
         price: 0,
         discountPer: 0
-      }
+      },
+      defaultImage: "/img/elephant-g7baf1f085_640.png"
     };
   },
   methods: {
     addItem() {
+      if (this.item.imgPath === "") {
+        this.item.imgPath = this.defaultImage;
+      }
       axios
           .post("/api/items", this.item)
           .then(response => {

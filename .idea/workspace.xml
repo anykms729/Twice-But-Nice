@@ -4,15 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a371e409-f924-400f-9d5c-4f254ae01e88" name="Changes" comment="Update design">
+    <list default="true" id="a371e409-f924-400f-9d5c-4f254ae01e88" name="Changes" comment="Update design &amp; Add DeleteItem page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformfrontend/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/platformfrontend/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformfrontend/src/components/Card.vue" beforeDir="false" afterPath="$PROJECT_DIR$/platformfrontend/src/components/Card.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformfrontend/src/components/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/platformfrontend/src/components/Header.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformbackend/src/main/java/org/platformlib/platformbackend/controller/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformbackend/src/main/java/org/platformlib/platformbackend/controller/ItemController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformbackend/src/main/java/org/platformlib/platformbackend/repository/ItemRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformbackend/src/main/java/org/platformlib/platformbackend/repository/ItemRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformfrontend/public/img/tree-gde9651e5e_640.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformfrontend/src/assets/assets/img/post-impressionist-geb318af19_640.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformfrontend/src/assets/assets/img/shoe-g0be8defea_640.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformfrontend/src/assets/assets/img/vincent-van-gogh-g3cbefc52f_640.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformfrontend/src/assets/assets/img/vintage-g119f88179_640.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/platformfrontend/src/pages/AddItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/platformfrontend/src/pages/AddItem.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformfrontend/src/pages/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/platformfrontend/src/pages/Home.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformfrontend/src/pages/Order.vue" beforeDir="false" afterPath="$PROJECT_DIR$/platformfrontend/src/pages/Order.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformfrontend/src/script/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/platformfrontend/src/script/router.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,7 +188,7 @@
       <workItem from="1689435063398" duration="596000" />
       <workItem from="1689435880371" duration="4734000" />
       <workItem from="1689513954500" duration="24689000" />
-      <workItem from="1689681164988" duration="30934000" />
+      <workItem from="1689681164988" duration="35848000" />
     </task>
     <task id="LOCAL-00001" summary="Upgrade images">
       <option name="closed" value="true" />
@@ -269,7 +270,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689780611360</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Update design &amp; Add DeleteItem page">
+      <option name="closed" value="true" />
+      <created>1689786413994</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1689786413994</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -306,7 +315,8 @@
     <MESSAGE value="Update Add Item vue page" />
     <MESSAGE value="Update Home.vue" />
     <MESSAGE value="Update design" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update design" />
+    <MESSAGE value="Update design &amp; Add DeleteItem page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update design &amp; Add DeleteItem page" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -50,7 +50,8 @@ public class ItemController {
         // Check if the item with the specified ID exists in the database
         if (itemRepository.existsById(itemId)) {
             // Delete the item from the database
-            itemRepository.deleteById(itemId);
+            Item item = itemRepository.findById(itemId);
+            itemRepository.delete(item);
             return ResponseEntity.ok("Item deleted successfully");
         } else {
             // If the item doesn't exist, return an appropriate response
