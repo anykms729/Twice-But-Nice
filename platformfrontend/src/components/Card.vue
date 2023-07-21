@@ -25,14 +25,15 @@
       <div class="modal" :class="{ 'show': showModal }">
         <div class="modal-dialog">
           <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">Success Message</h5>
-            </div>
             <div class="modal-body">
-              The item has been added to your cart successfully!
+              <!-- Container div to center the icon and message -->
+              <div style="display: flex; flex-direction: column; align-items: center;">
+                <i class="fa fa-check-square" style="font-size: 40px; font-weight: bold; margin-top: 10px"></i>
+                <p style="text-align: center; font-weight: bold; font-size: 20px; margin-top: 10px">The item has been added to your cart successfully!</p>
+              </div>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-success" @click="showModal = false">
+              <button type="button" class="btn btn-success text-white" @click="showModal = false" style="font-weight: bold">
                 Okay
               </button>
             </div>
@@ -105,12 +106,9 @@ export default {
   display: flex;
 }
 .modal-content {
-  border: none;
-  border-radius: 8px;
-}
-
-.modal-header {
-  border-bottom: none;
+  border-width: thick;
+  border-color: #198754;
+  border-radius: 10px;
 }
 
 .modal-footer {
@@ -118,31 +116,17 @@ export default {
 }
 
 .modal-dialog {
-  padding: 20px;
-  border-radius: 6px;
   width: 100%;
   max-width: 450px;
 }
 
-.modal-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 10px;
-}
 
-.modal-title {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.modal-body {
-  padding: 10px 13px;
+.fa-check-square {
+  color: #198754; /* Green color for the check mark */
 }
 
 .modal-footer {
   text-align: right;
-  margin-top: 10px;
 }
 
 </style>

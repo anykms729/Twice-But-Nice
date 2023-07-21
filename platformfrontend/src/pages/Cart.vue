@@ -10,8 +10,11 @@
         </li>
       </ul>
       <div class="button-container">
-      <router-link to="/order" class="btn btn-warning text-white" style="font-weight: bold;">Online Transaction</router-link>
-      <router-link to="/order" class="btn btn-success text-white" style="font-weight: bold;">In-person Transaction</router-link>
+        <router-link to="/order" class="btn btn-warning text-white" style="font-weight: bold;">Online Transaction
+        </router-link>
+        <router-link to="/sendMessageModal" class="btn btn-success text-white" style="font-weight: bold;">In-person
+          Transaction
+        </router-link>
       </div>
     </div>
   </div>
@@ -86,10 +89,10 @@ export default {
 }
 
 .cart .btn {
-  width:400px;
-  display:block;
-  margin:0 30px;
-  padding:13px 12px;
+  width: 400px;
+  display: block;
+  margin: 0 30px;
+  padding: 13px 12px;
   font-size: 19px;
 }
 

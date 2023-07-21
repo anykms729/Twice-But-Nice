@@ -7,7 +7,7 @@
         <div class="row g-5">
           <div class="col-md-5 col-lg-4 order-md-last"><h4
               class="d-flex justify-content-between align-items-center mb-3">
-            <span class="text-warning">Order History</span>
+            <span class="text-warning">Cart</span>
             <span
                 class="badge bg-warning rounded-pill">
               {{ state.items.length }}
@@ -90,26 +90,17 @@ export default {
         items: "",
       }
     })
-
     const load = () => {
       axios.get("/api/cart/items").then(({data}) => {
-        console.log("Data is loaded");
-        console.log('this is data'+data);
         state.items = data;
        })
     };
 
-    /**
-     The function first creates a new object called args that contains the form data from the state object.
-     It then converts the items array in the state object to a JSON string and sets it as the value of the items property in the args object.
-     */
     const submit = () => {
       const args = JSON.parse(JSON.stringify(state.form));
       args.items = JSON.stringify(state.items);
 
-      console.log('Sending request to Server'+args)
       axios.post("/api/orders", args).then(() => {
-        console.log('Axios post successful')
         router.push({path: "/orders"})
       })
     }
