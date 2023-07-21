@@ -5,18 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a371e409-f924-400f-9d5c-4f254ae01e88" name="Changes" comment="Update Order function and debug error which is caused misconfiguration in Database column">
-      <change afterPath="$PROJECT_DIR$/platformfrontend/public/img/elephant-g7baf1f085_640.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platformfrontend/src/pages/DeleteItem.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7e2517f0-c840-4a5d-bd0e-e025ea261eb2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7e2517f0-c840-4a5d-bd0e-e025ea261eb2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformbackend/src/main/java/org/platformlib/platformbackend/controller/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformbackend/src/main/java/org/platformlib/platformbackend/controller/ItemController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformbackend/src/main/java/org/platformlib/platformbackend/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformbackend/src/main/java/org/platformlib/platformbackend/controller/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformbackend/src/main/java/org/platformlib/platformbackend/dto/OrderDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformbackend/src/main/java/org/platformlib/platformbackend/dto/OrderDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformbackend/src/main/java/org/platformlib/platformbackend/entity/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformbackend/src/main/java/org/platformlib/platformbackend/entity/Item.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/platformfrontend/src/components/Card.vue" beforeDir="false" afterPath="$PROJECT_DIR$/platformfrontend/src/components/Card.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformfrontend/src/components/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/platformfrontend/src/components/Header.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformfrontend/src/pages/Cart.vue" beforeDir="false" afterPath="$PROJECT_DIR$/platformfrontend/src/pages/Cart.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/platformfrontend/src/pages/Order.vue" beforeDir="false" afterPath="$PROJECT_DIR$/platformfrontend/src/pages/Order.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformfrontend/src/pages/Orders.vue" beforeDir="false" afterPath="$PROJECT_DIR$/platformfrontend/src/pages/Orders.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformfrontend/src/script/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/platformfrontend/src/script/router.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,7 +184,7 @@
       <workItem from="1689435063398" duration="596000" />
       <workItem from="1689435880371" duration="4734000" />
       <workItem from="1689513954500" duration="24689000" />
-      <workItem from="1689681164988" duration="53119000" />
+      <workItem from="1689681164988" duration="67383000" />
     </task>
     <task id="LOCAL-00001" summary="Upgrade images">
       <option name="closed" value="true" />
@@ -289,7 +282,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689849215250</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Update Order function and debug error which is caused misconfiguration in Database column">
+      <option name="closed" value="true" />
+      <created>1689870841611</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1689870841611</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -329,6 +330,18 @@
     <MESSAGE value="Update design &amp; Add DeleteItem page" />
     <MESSAGE value="Update Order function and debug error which is caused misconfiguration in Database column" />
     <option name="LAST_COMMIT_MESSAGE" value="Update Order function and debug error which is caused misconfiguration in Database column" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/platformfrontend/src/components/Card.vue</url>
+          <line>4</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
