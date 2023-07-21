@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a371e409-f924-400f-9d5c-4f254ae01e88" name="Changes" comment="Update Order function and debug error which is caused misconfiguration in Database column">
+    <list default="true" id="a371e409-f924-400f-9d5c-4f254ae01e88" name="Changes" comment="Update General Function">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/platformfrontend/src/components/Card.vue" beforeDir="false" afterPath="$PROJECT_DIR$/platformfrontend/src/components/Card.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformfrontend/src/pages/Cart.vue" beforeDir="false" afterPath="$PROJECT_DIR$/platformfrontend/src/pages/Cart.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformfrontend/src/pages/Order.vue" beforeDir="false" afterPath="$PROJECT_DIR$/platformfrontend/src/pages/Order.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformfrontend/src/script/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/platformfrontend/src/script/router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformfrontend/src/pages/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/platformfrontend/src/pages/Login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformfrontend/src/pages/SendMessageModal.vue" beforeDir="false" afterPath="$PROJECT_DIR$/platformfrontend/src/pages/SendMessageModal.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,7 +183,7 @@
       <workItem from="1689435063398" duration="596000" />
       <workItem from="1689435880371" duration="4734000" />
       <workItem from="1689513954500" duration="24689000" />
-      <workItem from="1689681164988" duration="67383000" />
+      <workItem from="1689681164988" duration="71766000" />
     </task>
     <task id="LOCAL-00001" summary="Upgrade images">
       <option name="closed" value="true" />
@@ -290,7 +289,23 @@
       <option name="project" value="LOCAL" />
       <updated>1689870841611</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Update General Function">
+      <option name="closed" value="true" />
+      <created>1689943803953</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1689943803953</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Update General Function">
+      <option name="closed" value="true" />
+      <created>1689943888233</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1689943888233</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -329,7 +344,8 @@
     <MESSAGE value="Update design" />
     <MESSAGE value="Update design &amp; Add DeleteItem page" />
     <MESSAGE value="Update Order function and debug error which is caused misconfiguration in Database column" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update Order function and debug error which is caused misconfiguration in Database column" />
+    <MESSAGE value="Update General Function" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update General Function" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -339,6 +355,12 @@
           <line>4</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/platformfrontend/src/components/Card.vue</url>
+          <line>41</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

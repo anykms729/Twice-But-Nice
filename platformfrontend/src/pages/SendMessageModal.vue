@@ -158,4 +158,5 @@ ul.list-group {
     font-size: 1.2rem; /* Adjust the font size for smaller screens */
   }
 }
+
 </style>

@@ -25,19 +25,19 @@
       <div class="modal" :class="{ 'show': showModal }">
         <div class="modal-dialog">
           <div class="modal-content">
-            <div class="modal-body">
+            <div class="modal-body d-flex flex-column justify-content-between">
               <!-- Container div to center the icon and message -->
               <div style="display: flex; flex-direction: column; align-items: center;">
-                <i class="fa fa-check-square" style="font-size: 40px; font-weight: bold; margin-top: 10px"></i>
-                <p style="text-align: center; font-weight: bold; font-size: 20px; margin-top: 10px">The item has been added to your cart successfully!</p>
+                <i class="fa fa-check-square" style="font-size: 40px; font-weight: bold;"></i>
+                <p style="text-align: center; font-weight: bold; font-size: 20px;">The item has been added to your cart successfully!</p>
               </div>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-success text-white" @click="showModal = false" style="font-weight: bold">
+              <!-- Add a spacer to push the button to the bottom -->
+              <div style="flex: 1;"></div>
+              <button type="button" class="btn btn-success text-white" @click="showModal = false" style="font-weight: bold; margin-left: auto;">
                 Okay
               </button>
             </div>
-          </div>
+           </div>
         </div>
       </div>
     </div>
@@ -55,7 +55,6 @@ export default {
     item: Object
   },
   setup() {
-    // Your existing setup() code here
     return { lib };
   }
   ,data() {
@@ -106,27 +105,19 @@ export default {
   display: flex;
 }
 .modal-content {
+  border-style: dot-dot-dash;
   border-width: thick;
   border-color: #198754;
   border-radius: 10px;
 }
 
-.modal-footer {
-  border-top: none;
-}
-
 .modal-dialog {
   width: 100%;
-  max-width: 450px;
+  max-width: 300px;
 }
-
 
 .fa-check-square {
   color: #198754; /* Green color for the check mark */
-}
-
-.modal-footer {
-  text-align: right;
 }
 
 </style>

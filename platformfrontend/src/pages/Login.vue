@@ -16,7 +16,10 @@
       </label>
     </div>
     <button class="w-100 btn btn-lg text-white btn-warning" @click="submit()" style="font-weight: bold;">Sign in</button>
+
+
   </div>
+
 </template>
 
 <script>
@@ -31,24 +34,25 @@ export default {
       form: {
         email: "",
         password: ""
-      }
-    })
+      }})
 
     const submit = () => {
       axios.post("/api/account/login", state.form).then((res) => {
         store.commit('setAccount', res.data);
-        console.log(res.data);
         sessionStorage.setItem("id",res.data);
-        router.push({path:"/"});
-        window.alert("Login successfully");
+        // Show the success modal
+         router.push({path:"/"});
       }).catch(()=>{
         window.alert("Login failed");
       });
     }
 
+
     return {state, submit}
+
   }
-}
+};
+
 </script>
 
 <style scoped>
@@ -72,4 +76,6 @@ export default {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
+
+
 </style>
