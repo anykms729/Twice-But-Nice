@@ -15,9 +15,10 @@
         <input type="checkbox" value="remember-me" @keyup.enter="submit()"> Remember me
       </label>
     </div>
-    <button class="w-100 btn btn-lg text-white btn-warning" @click="submit()" style="font-weight: bold;">Sign in</button>
-
-
+    <div class="button-container">
+      <button class="w-50 btn btn-lg text-white btn-warning" @click="submit()" style="font-weight: bold;">Sign in</button>
+      <button class="w-50 btn btn-lg text-white btn-success" @click="$router.push('/signUpModal')" style="font-weight: bold;">Sign up</button>
+    </div>
   </div>
 
 </template>
@@ -76,6 +77,9 @@ export default {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
-
+.button-container {
+  display: flex;
+  gap: 10px;
+}
 
 </style>

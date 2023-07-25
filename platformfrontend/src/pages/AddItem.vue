@@ -2,12 +2,11 @@
   <div>
     <h1></h1>
     <!-- Modal -->
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal fade" id="ModalCenter" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLongTitle">Add Item</h5>
-
+            <h5 class="modal-title" id="addItemTitle">Add Item</h5>
           </div>
           <div class="modal-body">
             <form @submit.prevent="addItem">
@@ -31,6 +30,9 @@
                 <button type="button" class="btn btn-success" data-dismiss="modal" style="font-weight: bold;" @click="closeModalAndRedirect">Close</button>
                 <button type="submit" class="btn btn-warning text-white" style="font-weight: bold;" >Add Item</button>
               </div>
+              <div v-if="errorMessage" class="alert alert-danger" role="alert">
+                {{ errorMessage }}
+              </div>
             </form>
           </div>
         </div>
@@ -51,7 +53,8 @@ export default {
         price: 0,
         discountPer: 0
       },
-      defaultImage: "/img/elephant-g7baf1f085_640.png"
+      defaultImage: "/img/elephant-g7baf1f085_640.png",
+      errorMessage: '', 
     };
   },
   methods: {
@@ -74,11 +77,18 @@ export default {
             this.closeModalAndRedirect();
           })
           .catch(error => {
-            console.error("Error adding item:", error);
+            // Error occurred while adding the item
+            if (error.response && error.response.status === 401) {
+              // Unauthorized (401) - User is not logged in, show a pop-up message
+              this.errorMessage = "Please log in to add an item.";
+              // You can also display a custom styled modal instead of the standard alert.
+            } else {
+              this.errorMessage ="There's something wrong, contact with platform admin";
+            }
           });
     },
     closeModal() {
-      const modalElement = document.getElementById("exampleModalCenter");
+      const modalElement = document.getElementById("ModalCenter");
       modalElement.classList.remove("show");
       modalElement.style.display = "none";
       const modalBackdropElement = document.getElementsByClassName("modal-backdrop")[0];
@@ -91,7 +101,7 @@ export default {
   },
   mounted() {
     // Open the modal when the component is mounted
-    const modalElement = document.getElementById("exampleModalCenter");
+    const modalElement = document.getElementById("ModalCenter");
     modalElement.style.display = "block";
     modalElement.classList.add("show");
     modalElement.style.paddingRight = "15px";
@@ -106,7 +116,6 @@ export default {
 </script>
 
 <style scoped>
-/* Additional CSS styling for the form */
 .form-group {
   margin-bottom: 20px;
 }
@@ -120,20 +129,5 @@ label {
   padding: 10px;
   border-radius: 4px;
   border: 1px solid #ccc;
-}
-
-.btn-secondary {
-  background-color: #6c757d;
-  border-color: #6c757d;
-}
-
-.btn-primary {
-  background-color: #007bff;
-  border-color: #007bff;
-}
-
-.btn-primary:hover {
-  background-color: #0069d9;
-  border-color: #0069d9;
 }
 </style>

@@ -11,8 +11,13 @@
 //    protected void configure(HttpSecurity http) throws Exception {
 //        http.headers()
 //                .contentSecurityPolicy("default-src 'self' data:; img-src 'self' data:;")
+//                .formLogin() // Enable form-based authentication
+//                .loginPage("/login") // Specify the custom login page URL (you need to create the view for this page)
+//                .defaultSuccessUrl("/") // Redirect to the dashboard page after successful login
 //                .and()
-//                // Other security configurations...
+//                .logout() // Enable logout functionality
+//                .logoutUrl("/logout") // Specify the custom logout URL
+//                .logoutSuccessUrl("/") // Redirect to login page with a logout parameter after successful logout
 //                .csrf().disable();
 //    }
 //}

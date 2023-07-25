@@ -22,6 +22,9 @@
                 <button type="button" class="btn btn-success" data-dismiss="modal" style="font-weight: bold;" @click="closeModalAndRedirect">Close</button>
                 <button type="submit" class="btn btn-warning text-white" style="font-weight: bold;">Delete Item</button>
               </div>
+              <div v-if="errorMessage" class="alert alert-danger" role="alert">
+                {{ errorMessage }}
+              </div>
             </form>
           </div>
         </div>
@@ -39,7 +42,8 @@ export default {
       item: {
         itemId: "",
         itemName: ""
-      }
+      },
+      errorMessage: '', // Add this property to store the error message
     };
   },
   methods: {
@@ -63,7 +67,14 @@ export default {
             this.closeModalAndRedirect();
           })
           .catch(error => {
-            console.error("Error deleting item:", error);
+            // Error occurred while adding the item
+            if (error.response && error.response.status === 401) {
+              // Unauthorized (401) - User is not logged in, show a pop-up message
+              this.errorMessage = "Please log in to delete an item.";
+              // You can also display a custom styled modal instead of the standard alert.
+            } else {
+              this.errorMessage ="There's something wrong, contact with platform admin";
+            }
           });
     },
     closeModal() {
