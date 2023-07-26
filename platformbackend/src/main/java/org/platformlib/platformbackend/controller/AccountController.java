@@ -15,6 +15,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
+import java.util.HashMap;
 import java.util.Map;
 
 
@@ -27,7 +28,7 @@ public class AccountController {
     JwtService jwtService;
 
     @PostMapping("/api/account/signup")
-    public ResponseEntity signup(@RequestBody Map<String, String> params, HttpServletResponse res){
+    public ResponseEntity signup(@RequestBody Map<String, String> params, HttpServletResponse res) {
         String email = params.get("email");
         String password = params.get("password");
 
@@ -56,13 +57,37 @@ public class AccountController {
     }
 
 
+    //    @PostMapping("/api/account/login")
+//    public ResponseEntity login(@RequestBody Map<String, String> params, HttpServletResponse res) {
+//        Member member = memberRepository.findByEmailAndPassword(params.get("email"), params.get("password"));
+//        if (member != null) {
+//            int id = member.getId();
+//            // jwtService to generate a JSON Web Token (JWT) containing the user's ID. The getToken method takes the key "id" and the user's ID as parameters to create the token.
+//            String token = jwtService.getToken("id", id);
+//
+//            Cookie cookie = new Cookie("token", token);
+//            // "setHttpOnly" is used to set the HttpOnly attribute on the "token" cookie, which holds a JWT (JSON Web Token) for user authentication
+//            cookie.setHttpOnly(true);
+//            cookie.setPath("/");
+//
+//            res.addCookie(cookie);
+//            return new ResponseEntity<>(id, HttpStatus.OK);
+//        }
+//        throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+//    }
     @PostMapping("/api/account/login")
     public ResponseEntity login(@RequestBody Map<String, String> params, HttpServletResponse res) {
+        String email = params.get("email");
         Member member = memberRepository.findByEmailAndPassword(params.get("email"), params.get("password"));
         if (member != null) {
             int id = member.getId();
+
+            Map<String, Object> claims = new HashMap<>();
+            claims.put("id", id);
+            claims.put("email", email);
+
             // jwtService to generate a JSON Web Token (JWT) containing the user's ID. The getToken method takes the key "id" and the user's ID as parameters to create the token.
-            String token = jwtService.getToken("id", id);
+            String token = jwtService.getToken(claims);
 
             Cookie cookie = new Cookie("token", token);
             // "setHttpOnly" is used to set the HttpOnly attribute on the "token" cookie, which holds a JWT (JSON Web Token) for user authentication
@@ -76,13 +101,14 @@ public class AccountController {
     }
 
     @PostMapping("/api/account/logout")
-    public ResponseEntity logout(HttpServletResponse res){
+    public ResponseEntity logout(HttpServletResponse res) {
         Cookie cookie = new Cookie("token", null);
         cookie.setPath("/");
         cookie.setMaxAge(0);
         res.addCookie(cookie);
         return new ResponseEntity<>(HttpStatus.OK);
     }
+
     @GetMapping("/api/account/check")
     public ResponseEntity check(@CookieValue(value = "token", required = false) String token) {
         Claims claims = jwtService.getClaims(token);

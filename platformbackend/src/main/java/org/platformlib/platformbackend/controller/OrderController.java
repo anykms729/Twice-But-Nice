@@ -30,12 +30,6 @@ public class OrderController {
     @Autowired
     CartRepository cartRepository;
 
-    /**
-     * Get the orders for the authenticated members
-     * @param token the authentication token
-     * @return a list of orders
-     */
-
     @GetMapping("/api/orders")
     public ResponseEntity getOrder(
             @CookieValue(value = "token", required = false) String token
@@ -62,6 +56,7 @@ public class OrderController {
         if (!jwtService.isValid(token)) {
             throw new ResponseStatusException(HttpStatus.UNAUTHORIZED);
         }
+
         int memberId = jwtService.getId(token);
         Order newOrder = new Order();
         newOrder.setMemberId(memberId);

@@ -30,7 +30,7 @@
             <input
                 type="number"
                 id="negotiationPrice"
-                v-model="negotiationPrice"
+                v-model="state.form.negotiationPrice"
                 class="form-control"
                 placeholder="Enter your negotiation price"
             />
@@ -41,7 +41,7 @@
             <label for="messageToSeller">Message to Seller:</label>
             <textarea
                 id="messageToSeller"
-                v-model="message"
+                v-model="state.form.text"
                 class="form-control"
                 placeholder="Type your message to the seller..."
             ></textarea>
@@ -49,7 +49,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-success text-white" style="font-weight: bold;" @click="closeModal">Cancel</button>
-          <button type="button" class="btn btn-warning text-white" style="font-weight: bold;" @click="sendMessage">Send Message</button>
+          <button type="button" class="btn btn-warning text-white" style="font-weight: bold;" @click="submit()">Send Message</button>
         </div>
       </div>
     </div>
@@ -60,11 +60,16 @@
 import lib from "../script/lib";
 import axios from "axios";
 import { computed, reactive } from "vue";
+import router from "@/script/router";
 
 export default {
   setup() {
     const state = reactive({
       items: [],
+      form: {
+        negotiationPrice: "",
+        text: ""
+      }
     });
 
     const load = () => {
@@ -82,32 +87,23 @@ export default {
       return result;
     });
 
+    const submit = () => {
+      const args = JSON.parse(JSON.stringify(state.form));
+      args.items = JSON.stringify(state.items);
+      console.log(args);
+      axios.post("/api/messages", args).then(() => {
+        router.push({path: "/messages"})
+      })
+    }
     load();
 
-    return { state, lib, computedPrice };
-  },
-
-  data() {
-    return {
-      negotiationPrice: null,
-      message: "",
-    };
+    return { state, lib, computedPrice,submit };
   },
 
   methods: {
     closeModal() {
-      this.$router.push('/');
-    },
-    sendMessage() {
-      this.$emit("send", {
-        itemInfo: this.state.items,
-        negotiationPrice: this.negotiationPrice,
-        messageToSeller: this.message,
-      });
-
-      // Close the modal after sending the message
-      this.closeModal();
-    },
+      this.$router.push('/messages');
+    }
   },
 };
 </script>
@@ -125,9 +121,6 @@ export default {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* Adjust the modal width to be wider */
-.modal-dialog {
- }
 
 .modal-content {
   padding: 20px;

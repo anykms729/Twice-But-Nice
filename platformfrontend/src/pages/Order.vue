@@ -87,7 +87,8 @@ export default {
         name: "",
         address: "",
         payment: "",
-        items: "",
+        cardNumber: "",
+        items: ""
       }
     })
     const load = () => {

@@ -5,16 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a371e409-f924-400f-9d5c-4f254ae01e88" name="Changes" comment="Update General Function">
+      <change afterPath="$PROJECT_DIR$/platformbackend/src/main/java/org/platformlib/platformbackend/entity/Message.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platformbackend/src/main/java/org/platformlib/platformbackend/repository/MessageRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/platformfrontend/src/pages/Messages.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/7e2517f0-c840-4a5d-bd0e-e025ea261eb2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7e2517f0-c840-4a5d-bd0e-e025ea261eb2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformbackend/src/main/java/org/platformlib/platformbackend/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformbackend/src/main/java/org/platformlib/platformbackend/config/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/platformbackend/src/main/java/org/platformlib/platformbackend/controller/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformbackend/src/main/java/org/platformlib/platformbackend/controller/AccountController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformbackend/src/main/java/org/platformlib/platformbackend/controller/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformbackend/src/main/java/org/platformlib/platformbackend/controller/ItemController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformbackend/src/main/java/org/platformlib/platformbackend/entity/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformbackend/src/main/java/org/platformlib/platformbackend/entity/Member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformbackend/src/main/java/org/platformlib/platformbackend/repository/MemberRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformbackend/src/main/java/org/platformlib/platformbackend/repository/MemberRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformfrontend/src/pages/AddItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/platformfrontend/src/pages/AddItem.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformfrontend/src/pages/DeleteItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/platformfrontend/src/pages/DeleteItem.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformfrontend/src/pages/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/platformfrontend/src/pages/Login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformbackend/src/main/java/org/platformlib/platformbackend/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformbackend/src/main/java/org/platformlib/platformbackend/controller/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformbackend/src/main/java/org/platformlib/platformbackend/dto/OrderDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformbackend/src/main/java/org/platformlib/platformbackend/dto/OrderDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformbackend/src/main/java/org/platformlib/platformbackend/service/JwtService.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformbackend/src/main/java/org/platformlib/platformbackend/service/JwtService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformbackend/src/main/java/org/platformlib/platformbackend/service/JwtServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformbackend/src/main/java/org/platformlib/platformbackend/service/JwtServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformfrontend/src/pages/Order.vue" beforeDir="false" afterPath="$PROJECT_DIR$/platformfrontend/src/pages/Order.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformfrontend/src/pages/SendMessageModal.vue" beforeDir="false" afterPath="$PROJECT_DIR$/platformfrontend/src/pages/SendMessageModal.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/platformfrontend/src/script/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/platformfrontend/src/script/router.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,11 +53,25 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="17c567f0-08c2-405c-bf6f-59cd1627db88" />
+        <option name="url" value="https://github.com/anykms729/TwiceButNice.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -96,6 +112,11 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\user\Desktop\Project\platform\platformfrontend\src\pages" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.platformlib.platformbackend.dto" />
+      <recent name="org.platformlib.platformbackend.controller" />
+      <recent name="org.platformlib.platformbackend.entity" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -322,7 +343,15 @@
       <option name="project" value="LOCAL" />
       <updated>1689949566355</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Update General Function">
+      <option name="closed" value="true" />
+      <created>1690291644703</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1690291644703</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -376,6 +405,12 @@
           <url>file://$PROJECT_DIR$/platformfrontend/src/components/Card.vue</url>
           <line>41</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/platformfrontend/src/pages/SendMessageModal.vue</url>
+          <line>74</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

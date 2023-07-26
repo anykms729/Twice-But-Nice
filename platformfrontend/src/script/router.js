@@ -8,6 +8,7 @@ import AddItem from "@/pages/AddItem.vue";
 import DeleteItem from "@/pages/DeleteItem.vue";
 import SendMessageModal from "@/pages/SendMessageModal.vue";
 import SignUpModal from "@/pages/SignUpModal.vue";
+import Messages from "@/pages/Messages.vue";
 
 const routes = [
     {path: '/', component: Home},
@@ -18,7 +19,8 @@ const routes = [
     {path: '/addItem', component: AddItem},
     {path: '/deleteItem', component: DeleteItem},
     {path: '/sendMessageModal', component: SendMessageModal},
-    {path: '/signUpModal', component: SignUpModal}
+    {path: '/signUpModal', component: SignUpModal},
+    {path: '/messages', component: Messages}
 ]
 
 const router = createRouter(
