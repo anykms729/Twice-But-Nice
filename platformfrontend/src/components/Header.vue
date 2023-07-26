@@ -6,11 +6,7 @@
           <div class="col-sm-8 col-md-7 py-4">
             <h4 class="text-white">About</h4>
             <p class="text-muted">
-              Welcome to Twice but Nice, Ireland's premier C2C second-hand platform! We believe in unlocking the hidden
-              value in pre-loved items, empowering individuals to buy and sell with ease. With a click of a button, you
-              can explore a world of remarkable deals, whether you're hunting for unique treasures or looking to
-              clutter your life. Our vibrant community of sellers and buyers ensures that every transaction is a
-              win-win, fostering a sustainable and circular economy. </p>
+              Welcome to Twice but Nice, the top C2C marketplace for used goods in Ireland! We think that by revealing the latent worth in used goods, people may easily buy and sell them. You may discover a world of amazing offers with just a click, whether you're looking for one-of-a-kind finds or just want to fill your life with stuff. Every transaction is guaranteed to be profitable by our active community of buyers and sellers, promoting a sustainable and circular economy. </p>
           </div>
           <div class="col-sm-4 offset-md-1 py-4">
             <h4 class="text-white">Category</h4>
@@ -20,6 +16,9 @@
               </li>
               <li v-if="$store.state.account.id">
                 <router-link to="/orders" class="text-white" style="text-decoration: none;">Order History</router-link>
+              </li>
+              <li v-if="$store.state.account.id">
+                <router-link to="/messages" class="text-white" style="text-decoration: none;">Message History</router-link>
               </li>
               <li>
                 <router-link to="/login" class="text-white" v-if="!$store.state.account.id" style="text-decoration: none;">Login</router-link>

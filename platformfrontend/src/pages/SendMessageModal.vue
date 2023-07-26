@@ -90,7 +90,6 @@ export default {
     const submit = () => {
       const args = JSON.parse(JSON.stringify(state.form));
       args.items = JSON.stringify(state.items);
-      console.log(args);
       axios.post("/api/messages", args).then(() => {
         router.push({path: "/messages"})
       })
@@ -120,7 +119,6 @@ export default {
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.5);
 }
-
 
 .modal-content {
   padding: 20px;

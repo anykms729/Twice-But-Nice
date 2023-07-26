@@ -1,8 +1,11 @@
 <template>
   <div class="orders">
     <div class="container">
+      <div class="thank-you-message">
+        My Order History
+      </div>
       <table class="table table-bordered">
-        <thead>
+        <thead class="gold-header text-white">
         <tr>
           <th>Number</th>
           <th>Customer name</th>
@@ -57,6 +60,17 @@ export default {
 <style scoped>
 .table {
   margin-top: 30px;
+  text-align: center;
+}
+.gold-header {
+  background-color: gold;
+}
+.thank-you-message {
+  margin-bottom: 20px;
+  margin-top: 30px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
 }
 
 .table > tbody {

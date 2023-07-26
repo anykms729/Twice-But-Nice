@@ -4,20 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a371e409-f924-400f-9d5c-4f254ae01e88" name="Changes" comment="Update General Function">
-      <change afterPath="$PROJECT_DIR$/platformbackend/src/main/java/org/platformlib/platformbackend/entity/Message.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platformbackend/src/main/java/org/platformlib/platformbackend/repository/MessageRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/platformfrontend/src/pages/Messages.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7e2517f0-c840-4a5d-bd0e-e025ea261eb2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7e2517f0-c840-4a5d-bd0e-e025ea261eb2.xml" afterDir="false" />
+    <list default="true" id="a371e409-f924-400f-9d5c-4f254ae01e88" name="Changes" comment="Update Message Function">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformbackend/src/main/java/org/platformlib/platformbackend/controller/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformbackend/src/main/java/org/platformlib/platformbackend/controller/AccountController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformbackend/src/main/java/org/platformlib/platformbackend/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformbackend/src/main/java/org/platformlib/platformbackend/controller/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformbackend/src/main/java/org/platformlib/platformbackend/dto/OrderDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformbackend/src/main/java/org/platformlib/platformbackend/dto/OrderDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformbackend/src/main/java/org/platformlib/platformbackend/service/JwtService.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformbackend/src/main/java/org/platformlib/platformbackend/service/JwtService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformbackend/src/main/java/org/platformlib/platformbackend/service/JwtServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/platformbackend/src/main/java/org/platformlib/platformbackend/service/JwtServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformfrontend/src/pages/Order.vue" beforeDir="false" afterPath="$PROJECT_DIR$/platformfrontend/src/pages/Order.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformfrontend/src/components/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/platformfrontend/src/components/Header.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformfrontend/src/pages/Messages.vue" beforeDir="false" afterPath="$PROJECT_DIR$/platformfrontend/src/pages/Messages.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/platformfrontend/src/pages/Orders.vue" beforeDir="false" afterPath="$PROJECT_DIR$/platformfrontend/src/pages/Orders.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/platformfrontend/src/pages/SendMessageModal.vue" beforeDir="false" afterPath="$PROJECT_DIR$/platformfrontend/src/pages/SendMessageModal.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/platformfrontend/src/script/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/platformfrontend/src/script/router.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -351,7 +343,15 @@
       <option name="project" value="LOCAL" />
       <updated>1690291644703</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Update Message Function">
+      <option name="closed" value="true" />
+      <created>1690375968436</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1690375968436</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -391,7 +391,8 @@
     <MESSAGE value="Update design &amp; Add DeleteItem page" />
     <MESSAGE value="Update Order function and debug error which is caused misconfiguration in Database column" />
     <MESSAGE value="Update General Function" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update General Function" />
+    <MESSAGE value="Update Message Function" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update Message Function" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
