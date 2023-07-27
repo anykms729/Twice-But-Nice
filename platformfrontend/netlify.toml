@@ -1,4 +1,0 @@
-[build]
-base = "src"
-command = "npm run build"
-publish = "TwiceButNice/platformfrontend/public"
